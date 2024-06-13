@@ -4,14 +4,17 @@ from twilio.twiml.messaging_response import MessagingResponse
 from .schemas import SMSSendRequest, SMSReceiveResponse
 from .config import settings
 
-app = FastAPI()
+app = FastAPI(title="PyCommsPay SMS",
+    description="test",
+    summary="",
+    version="0.0.1",)
 
 client = Client(settings.twilio_account_sid, settings.twilio_auth_token)
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello World"}
+async def init():
+    return {"message": "PyCommsPay SMS Init"}
 
 @app.post("/send-sms/")
 async def send_sms(sms_request: SMSSendRequest):
