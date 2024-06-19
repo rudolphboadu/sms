@@ -11,7 +11,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'sms_package=sms_app.main:app',
+            'sms_package= app.main:app',
         ],
     },
 )
