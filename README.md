@@ -1,1 +1,1 @@
-# P-yCommsPay-SMS
+# PyCommsPay-SMS
